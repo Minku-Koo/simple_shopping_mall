@@ -1,2 +1,2 @@
-IAMPORT_KEY = '5432747754559068'
-IAMPORT_SECRET = 'Fxc36d64TrrWTawJuQbfmLidTa5w9D5ObhShvZmoqOkkZQ3tHfJ302hUcnql0vacN2ti1QHsF1MESQ8z'
+IAMPORT_KEY = 'iamport api key'
+IAMPORT_SECRET = 'iamport secret key'
