@@ -1,2 +1,2 @@
 USER = 'admin'
-PASSWORD = 'rnalsrn12'
+PASSWORD = 'mysql password'
