@@ -95,11 +95,10 @@ from . import secret_mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'minkudb',
+        'NAME': 'db name',
         'USER': secret_mysql.USER,
         'PASSWORD': secret_mysql.PASSWORD,
-        # 'HOST': "minkudb.cyh4tidvjsxn.us-east-2.rds.amazonaws.com",
-        'HOST': "minkudb.cnnt0q0cb7b8.ap-northeast-2.rds.amazonaws.com",
+        'HOST': "dbname.~~.amazonaws.com",
         
         'PORT': '3306',
         'OPTIONS': {
