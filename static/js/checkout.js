@@ -1,21 +1,21 @@
 $(function() {
-    // console.log("checkout start");
+	
     // js 변수 설정
     var IMP=window.IMP;
-    // console.log("checkout start");
+	
     // 아임포트 대시보드-시스템-내정보-가맹점식별코드에서 확인, 
     // 경고 REST API secret이 노출되지 않도록 항상 주의
-    IMP.init('imp13017749');
+    IMP.init('iamport api secret');
     
     // order-form 상태가 submit on (제출하기 클릭) 상태이면 function 실행히켜라
     $('.order-form').on('submit', function(e) {
-		// console.log("order form get");
+		
         // order-form에서 가격을 찾아서 콤마(,)를 제거
         var amount = parseFloat($('.order-form input[name="amount"]').val().replace(',',''));
-        // console.log("amount:"+amount);
+        
         // 결재 종류(카드, 이체, 기타 등)를 확인하여 해당 결재창을 보여주도록 하는 코드
         var type=$('.order-form input[name="type"]:checked').val();
-        // console.log("type:"+type);
+        
         // 결재하기 버튼 누름 --> 주문생성 - 결재 = 결재정보 업데이트
         // AjaxCreateOrder는 아래에서 별도로 만들 함수
         var order_id = AjaxCreateOrder(e);
@@ -25,9 +25,9 @@ $(function() {
             // return false --> 폼이 동작하지 않도록 함, 
             // return true --> submit이 완료되어 페이지가 변환 되는 등 변화 발생
         }
-		// console.log("order_id:"+amount);
+		
         var merchant_id = AjaxStoreTransaction(e, order_id, amount, type);
-		// console.log("merchant_id:"+merchant_id);
+		
         // 결재 정보가 만들어졌다면 아임포트로 실제 결재 시도
         // 아임포트 결재 매뉴얼 확인: https://bit.ly/3njJjQy
         // 아임포트에서 요구하는 대로 작성해야 함
@@ -87,7 +87,7 @@ $(function() {
 // $('.order-form').on('submit', function(e) {...}가 실행되었던
 // 이벤트(event) e를 그대로 들고 와서 활용하는 AjaxCreateOrder 함수
 function AjaxCreateOrder(e) {
-    // console.log("AjaxCreateOrder");
+	
     // Form이 submit 되는 것을 방지하기
     // 위 함수에서 return false가 있어서 어차피 작동 안함
     // 안저한 작동을 위해 추가
@@ -156,7 +156,7 @@ function AjaxCreateOrder(e) {
 // 이벤트(event) e를 그대로 들고 와서 활용하는 AjaxStoreTransaction 함수
 // AjaxCreateOrder 함수와 중복되는 부분은 코멘트 생략
 function AjaxStoreTransaction(e, order_id, amount, type) {
-    // console.log("AjaxStoreTransaction start");
+	
 	// Form이 submit 되는 것을 방지하기
     // 위 함수에서 return false가 있어서 어차피 작동 안함
     // 안저한 작동을 위해 추가
@@ -208,7 +208,7 @@ function AjaxStoreTransaction(e, order_id, amount, type) {
 // 거래 검증 기능: 아임포트 측에 요청을 보내서 값을 받음 
 //    --> 우리 서버에 저장된 정보와 비교
 function ImpTransaction(e, order_id, merchant_id, imp_id, amount) {
-    console.log("ImpTransaction start");
+	
 	e.preventDefault();
     
     // ajax 코드 요청
