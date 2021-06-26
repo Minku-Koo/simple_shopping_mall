@@ -1,7 +1,7 @@
 # Simple Shoppingmall
 ### Simple Shopping mall based on Django Framework
 This is what I studied based on [Baepeu's Github](https://github.com/Baepeu/)     <br><br>
-📌 **Authors** :  [Minku Koo](https://github.com/Minku-Koo)     <br><br>
+📌 **Author** :  [Minku Koo](https://github.com/Minku-Koo)     <br><br>
 📌 **Study Period** : Jun.2021     <br><br>
 
 
